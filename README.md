@@ -24,8 +24,8 @@ Sigue estos pasos para correr el proyecto en tu máquina local:
 
 1. Clona el repositorio:
    ```bash
-   https://github.com/luisAngelDev/django-product-catalog.git
-   cd 
+   git clone https://github.com/luisAngelDev/django-product-catalog.git
+   
    ```
 
 2. Crea y activa un entorno virtual:S
