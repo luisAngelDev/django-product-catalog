@@ -7,7 +7,7 @@ Inicio
 
 {% block content %}
 
-    <div class="container py-5">
+    <section class="container py-5">
         <h1 class="text-center mb-4">Catálogo de Productos</h1>
         <div class="row">
             {% for product in products %}
@@ -23,7 +23,32 @@ Inicio
             </div>
             {% endfor %}
         </div>
-    </div>
+    </section>
+
+
+    <hr class="my-5">
+
+    <section class="container py-5" id="contact" class="bg-dark text-white p-5 rounded">
+        <h2 class="text-center text-white mb-4">Contáctame</h2>
+        <form action="#" method="post">
+            {% csrf_token %}
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <input type="text" class="form-control" placeholder="Nombre completo" required>
+                </div>
+                <div class="col-md-6">
+                    <input type="email" class="form-control" placeholder="Correo electrónico" required>
+                </div>
+            </div>
+            <div class="mb-3">
+                <textarea class="form-control" rows="4" placeholder="Escribe tu mensaje aquí..." required></textarea>
+            </div>
+            <div class="text-center">
+                <button class="btn btn-danger" type="submit">Enviar mensaje</button>
+            </div>
+        </form>
+    </section>
+
 
 
 {% endblock %}
