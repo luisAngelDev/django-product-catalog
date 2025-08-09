@@ -21,7 +21,7 @@ def product_list(request):
         form = ContactForm()
 
     return render(request, 'catalog/product_list.html', {
-        'productos': products,
+        'products': products,
         'form': form,
         'mensaje_exito': mensaje_exito,
     })

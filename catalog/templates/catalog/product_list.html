@@ -28,20 +28,20 @@ Inicio
     <section class="container py-5" id="contact" class="bg-dark text-white p-5 rounded">
         
         <h2 class="text-center text-white mb-5">Contáctame</h2>
+
+        {% if mensaje_exito %}
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                {{ mensaje_exito }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
+            </div>
+        {% endif %}
+
         <div class="row align-items-stretch">
             <!-- Columna del formulario -->
             <div class="col-md-6 mb-4 d-flex">
-                <form action="#" method="post" class="bg-secondary p-5 rounded w-100 d-flex flex-column justify-content-between">
+                <form method="post" class="bg-secondary p-5 rounded w-100 d-flex flex-column justify-content-between">
                     {% csrf_token %}
-                    <div class="mb-3">
-                        <input type="text" class="form-control" placeholder="Nombre completo" required>
-                    </div>
-                    <div class="mb-3">
-                        <input type="email" class="form-control" placeholder="Correo electrónico" required>
-                    </div>
-                    <div class="mb-3">
-                        <textarea class="form-control" rows="4" placeholder="Escribe tu mensaje aquí..." required></textarea>
-                    </div>
+                    {{ form }}
                     <div class="text-center">
                         <button class="btn btn-warning" type="submit">Enviar mensaje</button>
                     </div>
@@ -64,6 +64,18 @@ Inicio
         </div>
 
     </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const alerta = document.querySelector('.alert');
+            if (alerta) {
+                setTimeout(() => {
+                    alerta.classList.remove('show');
+                    alerta.classList.add('hide');
+                }, 5000);
+            }
+        });
+    </script>
 
 
 
