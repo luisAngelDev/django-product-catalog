@@ -1,4 +1,6 @@
 from django import forms
+from django.core.mail import send_mail
+from django.conf import settings
 
 class ContactForm(forms.Form):
     nombre = forms.CharField(
@@ -24,3 +26,12 @@ class ContactForm(forms.Form):
             'rows': 5
         })
     )
+
+
+    def send_email(self):
+        subject = f"Nuevo mensaje de {self.cleaned_data['nombre']}"
+        message = f"De: {self.cleaned_data['correo']}\n\n{self.cleaned_data['mensaje']}"
+        from_email = settings.EMAIL_HOST_USER
+        recipient_list = [settings.EMAIL_HOST_USER]
+        send_mail(subject, message, from_email, recipient_list)
+
