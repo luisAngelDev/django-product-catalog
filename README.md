@@ -4,7 +4,7 @@ Catalogo de productos básico hecho con Django 5 y Bootstrap 5. Proyecto que per
 
 ## Vista previa
 
-![Vista previa]
+![Vista previa](media/products/previw-home-catalog.PNG)
 
 ## Características
 
