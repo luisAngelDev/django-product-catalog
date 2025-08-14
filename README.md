@@ -4,18 +4,24 @@ Catalogo de productos básico hecho con Django 5 y Bootstrap 5. Proyecto que per
 
 ## Vista previa
 
-![Vista previa](media/products/previw-home-catalog.PNG)
+![Vista previa](static/catalog/img/preview-home-catalog.PNG)
 
 ## Características
-
+- Listado dinámico de productos.
+- Botón de contacto por producto (puede dirigir a WhatsApp o formulario).
+- Formulario de contacto con envío de correo a Gmail.
+- Variables sensibles protegidas mediante archivo `.env`.
+- Estilos aplicados con Bootstrap.
+- Backend desarrollado con Django 5.2.4
 
 ## 🛠️ Tecnologías utilizadas
 
 - Python
 - Django
 - HTML5, CSS3
-- SQLite3 (por defecto de Django)
-- Bootstrap (opcional si se usa para estilos)
+- Bootstrap
+- SQLite3 (base de datos por defecto)
+- Gmail SMTP (para envío de mensajes)
 
 ## ⚙️ Instalación
 
@@ -25,7 +31,7 @@ Sigue estos pasos para correr el proyecto en tu máquina local:
 1. Clona el repositorio:
    ```bash
    git clone https://github.com/luisAngelDev/django-product-catalog.git
-   
+   cd product-catalog
    ```
 
 2. Crea y activa un entorno virtual:S
@@ -37,22 +43,36 @@ Sigue estos pasos para correr el proyecto en tu máquina local:
 3. Instala las dependencias:
    ```bash
    pip install -r requirements.txt
+   
    ```
+4. Crea un archivo .env en la raíz del proyecto y agrega tus credenciales:
 
-4. Aplica las migraciones:
+   EMAIL_HOST_USER=tuemail@gmail.com
+   EMAIL_HOST_PASSWORD=tu_contraseña_de_aplicacion
+
+
+5. Aplica las migraciones:
    ```bash
    python manage.py migrate
    ```
 
-5. Inicia el servidor:
+6. Inicia el servidor:
    ```bash
    python manage.py runserver
    ```
 
-6. Accede al sitio en tu navegador:
+7. Accede al sitio en tu navegador:
    ```
    http://127.0.0.1:8000/
    ```
+
+## 📬 Configuración del correo
+Este proyecto usa contraseñas de aplicación de Gmail para enviar mensajes.
+
+Debes:
+- Activar la verificación en dos pasos en tu cuenta.
+- Generar una contraseña de aplicación desde la configuración de seguridad de Google.
+- Guardarla en .env (nunca subir este archivo a GitHub).
 
 ## 🔐 Acceso al panel de administración
 
@@ -66,6 +86,22 @@ http://127.0.0.1:8000/admin
 > ```bash
 > python manage.py createsuperuser
 > ```
+
+product-catalog/
+├── manage.py
+├── catalog/              # App principal
+│   ├── models.py
+│   ├── views.py
+│   ├── urls.py
+│   └── templates/
+├── static/               # Archivos estáticos
+├── templates/            # Plantillas generales
+├── venv/                 # Entorno virtual (ignorado por git)
+├── .gitignore
+├── README.md
+├── requirements.txt
+└── .env                  # Variables de entorno (ignorado por git)
+
 
 ## 👨‍💻 Autor
 
