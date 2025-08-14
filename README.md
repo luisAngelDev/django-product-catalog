@@ -4,7 +4,7 @@ Catalogo de productos básico hecho con Django 5 y Bootstrap 5. Proyecto que per
 
 ## Vista previa
 
-![Vista previa](static/catalog/img/preview-home-catalog.PNG)
+![Vista previa](screenshots/preview-home-catalog.PNG)
 
 ## Características
 - Listado dinámico de productos.
@@ -47,9 +47,10 @@ Sigue estos pasos para correr el proyecto en tu máquina local:
    ```
 4. Crea un archivo .env en la raíz del proyecto y agrega tus credenciales:
 
+   ```bash
    EMAIL_HOST_USER=tuemail@gmail.com
    EMAIL_HOST_PASSWORD=tu_contraseña_de_aplicacion
-
+   ```
 
 5. Aplica las migraciones:
    ```bash
@@ -62,7 +63,7 @@ Sigue estos pasos para correr el proyecto en tu máquina local:
    ```
 
 7. Accede al sitio en tu navegador:
-   ```
+   ```bash
    http://127.0.0.1:8000/
    ```
 
@@ -87,6 +88,9 @@ http://127.0.0.1:8000/admin
 > python manage.py createsuperuser
 > ```
 
+## 📂 Estructura del proyecto
+
+```
 product-catalog/
 ├── manage.py
 ├── catalog/              # App principal
@@ -101,7 +105,7 @@ product-catalog/
 ├── README.md
 ├── requirements.txt
 └── .env                  # Variables de entorno (ignorado por git)
-
+```
 
 ## 👨‍💻 Autor
 
