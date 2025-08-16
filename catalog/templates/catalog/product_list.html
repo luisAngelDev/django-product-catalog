@@ -19,6 +19,15 @@ Inicio
                         <p class="card-text">{{ product.description }}</p>
                         <p class="fw-bold">S/ {{ product.price }}</p>
                     </div>
+
+                    <!-- Botón WhatsApp flotante dentro de la tarjeta -->
+                    <a href="https://wa.me/51999999999?text=Hola,%20estoy%20interesado%20en%20el%20producto%20{{ product.name }}"
+                        class="btn btn-success rounded-circle d-flex justify-content-center align-items-center whatsapp-btn"
+                        target="_blank"
+                        title="Consultar por WhatsApp">
+                        <i class="bi bi-whatsapp"></i>
+                    </a>
+
                 </div>
             </div>
             {% endfor %}
