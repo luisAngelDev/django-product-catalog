@@ -8,7 +8,7 @@ Inicio
 {% block content %}
 
     <section class="container py-5">
-        <h1 class="text-center mb-4">Catálogo de Productos</h1>
+        <h2 class="text-center m-5 text-white">Catálogo de Productos</h2>
         <div class="row">
             {% for product in products %}
             <div class="col-md-4 mb-4">
@@ -48,6 +48,9 @@ Inicio
         <div class="row align-items-stretch">
             <!-- Columna del formulario -->
             <div class="col-md-6 mb-4 d-flex">
+
+
+
                 <form method="post" class="bg-secondary p-5 rounded w-100">
                     {% csrf_token %}
     
@@ -67,7 +70,7 @@ Inicio
                     </div>
     
                     <div class="text-center">
-                        <button class="btn btn-warning" type="submit">Enviar mensaje</button>
+                        <button class="btn btn-success" type="submit">Enviar Correo</button>
                     </div>
                 </form>
             </div>
