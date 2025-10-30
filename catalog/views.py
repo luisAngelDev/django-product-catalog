@@ -1,11 +1,6 @@
 from django.shortcuts import render,redirect
 from .models import Product
-from django.urls import reverse
-from django.core.mail import send_mail
 from .forms import ContactForm
-from django.conf import settings
-
-# Create your views here.
 
 def product_list(request):
     products = Product.objects.all()
@@ -16,7 +11,7 @@ def product_list(request):
         if form.is_valid():
             form.send_email()
             mensaje_exito = "Mensaje enviado correctamente"
-            form = ContactForm()  # limpiar formulario
+            form = ContactForm()  # limpia formulario
     else:
         form = ContactForm()
 
