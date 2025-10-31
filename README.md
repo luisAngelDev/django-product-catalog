@@ -1,6 +1,6 @@
 # Web Product Catalog
 
-Catalogo de productos básico hecho con Django 5 y Bootstrap 5. Proyecto que permite agregar productos desde el panel admin de Django y ver los detalles de cada uno en la pagina, donde se podrá solicitar el producto.
+Catálogo de productos básico hecho con Django 5 y Bootstrap 5. Proyecto que permite agregar productos desde el panel admin de Django y ver los detalles de cada uno en la pagina, donde se podrá solicitar el producto.
 
 ## Vista previa
 
