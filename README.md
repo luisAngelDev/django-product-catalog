@@ -7,11 +7,10 @@ Catálogo de productos básico hecho con Django 5 y Bootstrap 5. Proyecto que pe
 ![Vista previa](screenshots/preview-home-catalog.PNG)
 
 ## Características
+
 - Listado dinámico de productos.
 - Botón de contacto por producto (puede dirigir a WhatsApp o formulario).
 - Formulario de contacto con envío de correo a Gmail.
-- Variables sensibles protegidas mediante archivo `.env`.
-- Estilos aplicados con Bootstrap.
 - Backend desarrollado con Django 5.2.4
 
 ## 🛠️ Tecnologías utilizadas
