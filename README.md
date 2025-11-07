@@ -11,6 +11,7 @@ Catálogo de productos básico hecho con Django 5 y Bootstrap 5. Proyecto que pe
 - Muestra un listado dinámico de productos.
 - Tiene un botón de contacto por producto (puede dirigir a WhatsApp o formulario).
 - Cuenta con un formulario de contacto con envío de correo a Gmail.
+- tiene un mapa en google map donde esta ubicado la direccion exacta.
 - El Backend desarrollado con Django 5.2.4
 
 ## 🛠️ Tecnologías utilizadas
